@@ -1,3 +1,78 @@
 [gd_scene format=3 uid="uid://cd2yhtj4c7iyw"]
 
+[ext_resource type="Script" uid="uid://k6kylwftt0s1" path="res://camera_3d.gd" id="1_ys316"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0fbbt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0fbbt"]
+
+[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_mxyc4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mxyc4"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mxyc4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_0fbbt"]
+
 [node name="Part_A" type="Node3D" unique_id=2060501816]
+
+[node name="Stage" type="MeshInstance3D" parent="." unique_id=2093579490]
+transform = Transform3D(8.370063, 0, 0, 0, 0.28483093, 0, 0, 0, 3.892314, 0, -0.022982717, -1.6170695)
+mesh = SubResource("CylinderMesh_0fbbt")
+
+[node name="BackWall" type="MeshInstance3D" parent="." unique_id=899497477]
+transform = Transform3D(13.7460985, 0, 0, 0, 10.3417425, 0, 0, 0, 1.9466052, -0.011932135, 1.2218001, -3.3010764)
+mesh = SubResource("BoxMesh_0fbbt")
+
+[node name="WestWall" type="MeshInstance3D" parent="." unique_id=1334703155]
+transform = Transform3D(-6.008611e-07, 0, 1.9466054, 0, 10.488707, 0, -13.746099, 0, -8.508883e-08, -6.8928638, 1.206073, 3.1140413)
+mesh = SubResource("BoxMesh_0fbbt")
+
+[node name="EastWall" type="MeshInstance3D" parent="." unique_id=1860142634]
+transform = Transform3D(-6.008611e-07, 0, 1.9466054, 0, 10.430854, 0, -13.746099, 0, -8.508883e-08, 7.2749, 1.1161941, 3.4861312)
+mesh = SubResource("BoxMesh_0fbbt")
+
+[node name="FourthWall" type="MeshInstance3D" parent="." unique_id=1146262545]
+transform = Transform3D(1.5687356, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7131257, 7.0191545)
+mesh = SubResource("PlaceholderMesh_mxyc4")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=959925709]
+transform = Transform3D(15.53283, 0, 0, 0, 1, 0, 0, 0, 10.966499, -0.08238953, -0.87329745, 2.2743435)
+mesh = SubResource("BoxMesh_mxyc4")
+
+[node name="Floor2" type="MeshInstance3D" parent="." unique_id=1998875583]
+transform = Transform3D(15.53283, 0, 0, 0, 1, 0, 0, 0, 15.798623, 0, 6.84498, 2.3270857)
+mesh = SubResource("BoxMesh_mxyc4")
+
+[node name="Spotlight1" type="MeshInstance3D" parent="." unique_id=727122016]
+transform = Transform3D(0.375134, 0, 0, 0, -0.31752667, -0.2980466, 0, 0.47278786, -0.20016958, -1.2127422, 2.1555724, -0.50192654)
+mesh = SubResource("CylinderMesh_mxyc4")
+
+[node name="Spotlight2" type="MeshInstance3D" parent="." unique_id=1852515570]
+transform = Transform3D(0.375134, 0, 0, 0, -0.31752667, -0.2980466, 0, 0.47278786, -0.20016958, 0.056597114, 2.1555724, -0.50192654)
+mesh = SubResource("CylinderMesh_mxyc4")
+
+[node name="Spotlight3" type="MeshInstance3D" parent="." unique_id=1759966310]
+transform = Transform3D(0.375134, 0, 0, 0, -0.31752667, -0.2980466, 0, 0.47278786, -0.20016958, 1.3155943, 2.1555724, -0.50192654)
+mesh = SubResource("CylinderMesh_mxyc4")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1394311242]
+transform = Transform3D(0.99501574, 0, 0.09971809, 0.007950505, 0.9968165, -0.079332426, -0.09940063, 0.07972982, 0.9918481, 0.33482295, 0.73117864, 1.7302437)
+current = true
+script = ExtResource("1_ys316")
+
+[node name="Dude1" type="MeshInstance3D" parent="." unique_id=762135324]
+transform = Transform3D(0.5206759, 0, 0, 0, 0.50240076, 0, 0, 0, 0.49294415, 1.6108335, 0.052705288, 0.22471166)
+mesh = SubResource("SphereMesh_0fbbt")
+
+[node name="Dude2" type="MeshInstance3D" parent="." unique_id=1726226249]
+transform = Transform3D(0.5206759, 0, 0, 0, 0.50240076, 0, 0, 0, 0.49294415, 0.69421685, 0.052705288, 0.5064179)
+mesh = SubResource("SphereMesh_0fbbt")
+
+[node name="Dude3" type="MeshInstance3D" parent="." unique_id=488737208]
+transform = Transform3D(0.5206759, 0, 0, 0, 0.50240076, 0, 0, 0, 0.49294415, -0.86226034, 0.052705288, 0.64513373)
+mesh = SubResource("SphereMesh_0fbbt")
+
+[node name="Dude4" type="MeshInstance3D" parent="." unique_id=279839059]
+transform = Transform3D(0.5206759, 0, 0, 0, 0.50240076, 0, 0, 0, 0.49294415, -1.5869066, 0.052705288, 0.50132704)
+mesh = SubResource("SphereMesh_0fbbt")
