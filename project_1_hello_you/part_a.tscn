@@ -2,31 +2,24 @@
 
 [ext_resource type="Script" uid="uid://k6kylwftt0s1" path="res://camera_3d.gd" id="1_ys316"]
 [ext_resource type="Texture2D" uid="uid://cdwou6vju57px" path="res://images/Charcoal_Grace.jpg" id="2_e7awo"]
+[ext_resource type="PackedScene" uid="uid://jtxq5ribap12" path="res://part_b.tscn" id="2_j0tu7"]
 [ext_resource type="Texture2D" uid="uid://1n0uq0kpgxhy" path="res://images/Periphery_2.jpg" id="3_j0tu7"]
 [ext_resource type="Texture2D" uid="uid://dbf7wl2newhnt" path="res://images/The_Great_Misdirect.jpg" id="4_3xb3d"]
 [ext_resource type="Texture2D" uid="uid://bvv3sn83b38ed" path="res://images/I_Don't_Want_To_See_You_In_Heaven.jpg" id="5_grw75"]
 [ext_resource type="Texture2D" uid="uid://dd7ib6qhki4nm" path="res://images/Pink_Lemonade.png" id="6_e7awo"]
 [ext_resource type="Texture2D" uid="uid://bvydgrfayt3qg" path="res://images/Eviscerate.jpg" id="7_uojgb"]
+[ext_resource type="PackedScene" uid="uid://c2lgg2dly1ay" path="res://part_c.tscn" id="9_3xb3d"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6bo7"]
-albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xb3d"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_0fbbt"]
-material = SubResource("StandardMaterial3D_q6bo7")
+[sub_resource type="Sky" id="Sky_grw75"]
+sky_material = SubResource("ProceduralSkyMaterial_3xb3d")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eso0h"]
-albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_0fbbt"]
-material = SubResource("StandardMaterial3D_eso0h")
-
-[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_mxyc4"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7awo"]
-albedo_color = Color(0.3013685, 0.24537209, 0.0069284695, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_mxyc4"]
-material = SubResource("StandardMaterial3D_e7awo")
+[sub_resource type="Environment" id="Environment_0j4pn"]
+background_mode = 2
+sky = SubResource("Sky_grw75")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jsbj"]
 albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
@@ -91,38 +84,15 @@ albedo_texture = ExtResource("7_uojgb")
 
 [node name="Part_A" type="Node3D" unique_id=2060501816]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1401950029]
+environment = SubResource("Environment_0j4pn")
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1394311242]
 transform = Transform3D(0.99501574, 0, 0.09971809, 0.007950505, 0.9968165, -0.07933242, -0.09940063, 0.07972982, 0.9918481, 0.33482295, 0.73117864, 1.7302437)
 current = true
 script = ExtResource("1_ys316")
 
-[node name="Stage" type="MeshInstance3D" parent="." unique_id=2093579490]
-transform = Transform3D(8.370063, 0, 0, 0, 0.28483093, 0, 0, 0, 3.892314, 0, -0.022982717, -1.6170695)
-mesh = SubResource("CylinderMesh_0fbbt")
-
-[node name="BackWall" type="MeshInstance3D" parent="." unique_id=899497477]
-transform = Transform3D(13.7460985, 0, 0, 0, 10.3417425, 0, 0, 0, 1.9466052, -0.011932135, 1.2218001, -3.3010764)
-mesh = SubResource("BoxMesh_0fbbt")
-
-[node name="WestWall" type="MeshInstance3D" parent="." unique_id=1334703155]
-transform = Transform3D(-6.008611e-07, 0, 1.9466054, 0, 10.488707, 0, -13.746099, 0, -8.508883e-08, -6.8928638, 1.206073, 3.1140413)
-mesh = SubResource("BoxMesh_0fbbt")
-
-[node name="EastWall" type="MeshInstance3D" parent="." unique_id=1860142634]
-transform = Transform3D(-6.008611e-07, 0, 1.9466054, 0, 10.430854, 0, -13.746099, 0, -8.508883e-08, 7.2749, 1.1161941, 3.4861312)
-mesh = SubResource("BoxMesh_0fbbt")
-
-[node name="FourthWall" type="MeshInstance3D" parent="." unique_id=1146262545]
-transform = Transform3D(1.5687356, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7131257, 7.0191545)
-mesh = SubResource("PlaceholderMesh_mxyc4")
-
-[node name="Floor" type="MeshInstance3D" parent="." unique_id=959925709]
-transform = Transform3D(15.53283, 0, 0, 0, 1, 0, 0, 0, 10.966499, -0.08238953, -0.87329745, 2.2743435)
-mesh = SubResource("BoxMesh_mxyc4")
-
-[node name="Floor2" type="MeshInstance3D" parent="." unique_id=1998875583]
-transform = Transform3D(15.53283, 0, 0, 0, 1, 0, 0, 0, 15.798623, 0, 6.84498, 2.3270857)
-mesh = SubResource("BoxMesh_mxyc4")
+[node name="Concert_Hall" parent="." unique_id=970916361 instance=ExtResource("2_j0tu7")]
 
 [node name="Spotlight1" type="MeshInstance3D" parent="." unique_id=727122016]
 transform = Transform3D(0.375134, 0, 0, 0, -0.31752667, -0.2980466, 0, 0.47278786, -0.20016958, -1.2127422, 2.1555724, -0.50192654)
@@ -238,3 +208,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9854419, 0.17001238, 0, -0.17001238, 0.985
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1141223162]
 transform = Transform3D(1, 0, 0, 0, 0.9854419, 0.17001238, 0, -0.17001238, 0.9854419, 2.5875657, 2.2283208, 0.3595031)
+
+[node name="Part_C" parent="." unique_id=1842323565 instance=ExtResource("9_3xb3d")]
+offset_left = 16.0
+offset_right = 16.0

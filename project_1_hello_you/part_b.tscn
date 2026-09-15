@@ -1,16 +1,36 @@
 [gd_scene format=3 uid="uid://jtxq5ribap12"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_beuwj"]
+albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_vq3a5"]
+material = SubResource("StandardMaterial3D_beuwj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysnx8"]
+albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gn0ur"]
+material = SubResource("StandardMaterial3D_ysnx8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o075a"]
+albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_u6u1k"]
+material = SubResource("StandardMaterial3D_o075a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqsnm"]
+albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nsn63"]
+material = SubResource("StandardMaterial3D_dqsnm")
 
 [sub_resource type="PlaceholderMesh" id="PlaceholderMesh_0fbbt"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22ri1"]
+albedo_color = Color(0.19563106, 0.14424986, 0.085729964, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_id878"]
+material = SubResource("StandardMaterial3D_22ri1")
 
 [sub_resource type="BoxMesh" id="BoxMesh_3sstj"]
 
@@ -40,6 +60,6 @@ mesh = SubResource("PlaceholderMesh_0fbbt")
 transform = Transform3D(15.53283, 0, 0, 0, 1, 0, 0, 0, 10.966499, 0, -1.0025342, 2.3270857)
 mesh = SubResource("BoxMesh_id878")
 
-[node name="Floor2" type="MeshInstance3D" parent="." unique_id=155008927]
+[node name="Ceiling" type="MeshInstance3D" parent="." unique_id=155008927]
 transform = Transform3D(15.53283, 0, 0, 0, 1, 0, 0, 0, 15.798623, 0, 6.84498, 2.3270857)
 mesh = SubResource("BoxMesh_3sstj")

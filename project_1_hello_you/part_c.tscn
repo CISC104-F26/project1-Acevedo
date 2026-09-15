@@ -1,20 +1,41 @@
 [gd_scene format=3 uid="uid://c2lgg2dly1ay"]
 
+[ext_resource type="Texture2D" uid="uid://be47nsvg0v2i1" path="res://icon.svg" id="1_e15qq"]
+[ext_resource type="Texture2D" uid="uid://c3oa6iifcq2wj" path="res://images/Sergio_Art.png" id="2_3seef"]
+
 [node name="Part_C" type="Control" unique_id=1842323565]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 107.0
+offset_bottom = 107.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1083034028]
+[node name="Label" type="Label" parent="." unique_id=1534035538]
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 650.0
-theme_override_font_sizes/normal_font_size = 20
-text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
+offset_left = 355.0
+offset_top = 206.0
+offset_right = 700.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 50
+text = "Aster Acevedo"
 
-Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
-to make your labels big enough to read. (This is font size 20px, for reference)."
-vertical_alignment = 1
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1979249339]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 265.0
+offset_right = 699.0
+offset_bottom = 397.0
+text = "I work at the UDairy Creamery so I can afford tickets to metal concerts and overpriced T-shirts."
+horizontal_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=519822203]
+position = Vector2(526, 137)
+texture = ExtResource("1_e15qq")
+
+[node name="SergioArt" type="Sprite2D" parent="." unique_id=1642854184]
+position = Vector2(526, 435)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3seef")
