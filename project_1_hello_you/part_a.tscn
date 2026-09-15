@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://cd2yhtj4c7iyw"]
 
 [ext_resource type="Script" uid="uid://k6kylwftt0s1" path="res://camera_3d.gd" id="1_ys316"]
+[ext_resource type="Texture2D" uid="uid://cdwou6vju57px" path="res://images/Charcoal_Grace.jpg" id="2_e7awo"]
+[ext_resource type="Texture2D" uid="uid://1n0uq0kpgxhy" path="res://images/Periphery_2.jpg" id="3_j0tu7"]
+[ext_resource type="Texture2D" uid="uid://dbf7wl2newhnt" path="res://images/The_Great_Misdirect.jpg" id="4_3xb3d"]
+[ext_resource type="Texture2D" uid="uid://bvv3sn83b38ed" path="res://images/I_Don't_Want_To_See_You_In_Heaven.jpg" id="5_grw75"]
+[ext_resource type="Texture2D" uid="uid://dd7ib6qhki4nm" path="res://images/Pink_Lemonade.png" id="6_e7awo"]
+[ext_resource type="Texture2D" uid="uid://bvydgrfayt3qg" path="res://images/Eviscerate.jpg" id="7_uojgb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6bo7"]
 albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
@@ -16,7 +22,11 @@ material = SubResource("StandardMaterial3D_eso0h")
 
 [sub_resource type="PlaceholderMesh" id="PlaceholderMesh_mxyc4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7awo"]
+albedo_color = Color(0.3013685, 0.24537209, 0.0069284695, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_mxyc4"]
+material = SubResource("StandardMaterial3D_e7awo")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jsbj"]
 albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
@@ -50,12 +60,34 @@ material = SubResource("StandardMaterial3D_j0tu7")
 
 [sub_resource type="BoxMesh" id="BoxMesh_i1o4x"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_narcd"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxyc4"]
 shading_mode = 0
 albedo_color = Color(0.8275312, 0.7796499, 1, 1)
 
 [sub_resource type="TorusMesh" id="TorusMesh_0fbbt"]
 material = SubResource("StandardMaterial3D_mxyc4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xr1d8"]
+albedo_texture = ExtResource("2_e7awo")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0fbbt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bo5qo"]
+albedo_texture = ExtResource("3_j0tu7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvfxj"]
+albedo_texture = ExtResource("4_3xb3d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2unr2"]
+albedo_texture = ExtResource("5_grw75")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xb3d"]
+albedo_texture = ExtResource("6_e7awo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j41gs"]
+albedo_texture = ExtResource("7_uojgb")
 
 [node name="Part_A" type="Node3D" unique_id=2060501816]
 
@@ -157,7 +189,7 @@ mesh = SubResource("BoxMesh_i1o4x")
 
 [node name="Album6" type="MeshInstance3D" parent="." unique_id=1536469587]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.042028368, 1.9671397, 1.1077209, -1.3094285)
-mesh = SubResource("BoxMesh_i1o4x")
+mesh = SubResource("BoxMesh_narcd")
 
 [node name="SpotlightLamp1" type="MeshInstance3D" parent="." unique_id=1850997696]
 transform = Transform3D(0.1753442, 0, 0, 0, -0.037234824, -0.12072214, 0, 0.05541126, -0.081121914, 0.062337935, 1.8394831, -0.03736142)
@@ -170,3 +202,39 @@ mesh = SubResource("TorusMesh_0fbbt")
 [node name="SpotlightLamp3" type="MeshInstance3D" parent="." unique_id=1136496289]
 transform = Transform3D(0.1753442, 0, 0, 0, -0.037234824, -0.12072214, 0, 0.05541126, -0.081121914, -1.2151637, 1.8394831, -0.03736142)
 mesh = SubResource("TorusMesh_0fbbt")
+
+[node name="AlbumCover1" type="MeshInstance3D" parent="." unique_id=2002268402]
+transform = Transform3D(0.47, 0, 0, 0, -2.0544352e-08, -0.47, 0, 0.47, -2.0544352e-08, 1.9722937, 1.1084019, -1.28408)
+material_override = SubResource("StandardMaterial3D_xr1d8")
+mesh = SubResource("PlaneMesh_0fbbt")
+
+[node name="AlbumCover2" type="MeshInstance3D" parent="." unique_id=1432668315]
+transform = Transform3D(0.47, 0, 0, 0, -2.0544352e-08, -0.47, 0, 0.47, -2.0544352e-08, 3.198266, 1.170554, -1.28408)
+material_override = SubResource("StandardMaterial3D_bo5qo")
+mesh = SubResource("PlaneMesh_0fbbt")
+
+[node name="AlbumCover3" type="MeshInstance3D" parent="." unique_id=1926927923]
+transform = Transform3D(0.47, 0, 0, 0, -2.0544352e-08, -0.47, 0, 0.47, -2.0544352e-08, 2.8310943, 2.3535466, -1.28408)
+material_override = SubResource("StandardMaterial3D_tvfxj")
+mesh = SubResource("PlaneMesh_0fbbt")
+
+[node name="AlbumCover4" type="MeshInstance3D" parent="." unique_id=1186935157]
+transform = Transform3D(0.47, 0, 0, 0, -2.0544352e-08, -0.47, 0, 0.47, -2.0544352e-08, -2.1214929, 1.1309135, -1.28408)
+material_override = SubResource("StandardMaterial3D_2unr2")
+mesh = SubResource("PlaneMesh_0fbbt")
+
+[node name="AlbumCover5" type="MeshInstance3D" parent="." unique_id=1616188336]
+transform = Transform3D(0.47, 0, 0, 0, -2.0544352e-08, -0.47, 0, 0.47, -2.0544352e-08, -3.3834155, 1.0856706, -1.28408)
+material_override = SubResource("StandardMaterial3D_3xb3d")
+mesh = SubResource("PlaneMesh_0fbbt")
+
+[node name="AlbumCover6" type="MeshInstance3D" parent="." unique_id=720513950]
+transform = Transform3D(0.47, 0, 0, 0, -2.0544352e-08, -0.47, 0, 0.47, -2.0544352e-08, -2.8226347, 2.5112123, -1.2840799)
+material_override = SubResource("StandardMaterial3D_j41gs")
+mesh = SubResource("PlaneMesh_0fbbt")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=676935407]
+transform = Transform3D(1, 0, 0, 0, 0.9854419, 0.17001238, 0, -0.17001238, 0.9854419, -3.0228407, 2.2283208, 0.3595031)
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1141223162]
+transform = Transform3D(1, 0, 0, 0, 0.9854419, 0.17001238, 0, -0.17001238, 0.9854419, 2.5875657, 2.2283208, 0.3595031)
